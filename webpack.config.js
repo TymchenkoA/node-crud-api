@@ -12,6 +12,13 @@ export default {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
+    library: {
+      type: 'module'
+    },
+    chunkFormat: 'module'
+  },
+  experiments: {
+    outputModule: true
   },
   module: {
     rules: [
@@ -19,10 +26,13 @@ export default {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: 'babel-loader'
         },
       },
     ],
   },
   mode: process.env.NODE_ENV || 'development',
+  resolve: {
+    extensions: ['.js'],
+  }
 };
