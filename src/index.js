@@ -1,0 +1,1 @@
+console.log('Good morning! What a rainy day today');

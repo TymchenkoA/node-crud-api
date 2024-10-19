@@ -1,0 +1,35 @@
+{
+  "name": "crud-api",
+  "version": "1.0.0",
+  "description": "CRUD API implemented with in-memory database underneath",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/bundle.js",
+    "dev": "nodemon src/index.js",
+    "build": "webpack --mode production",
+    "start:prod": "npm run build && node dist/bundle.js"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TymchenkoA/node-crud-api.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "Anastasiia Tymchenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TymchenkoA/node-crud-api/issues"
+  },
+  "homepage": "https://github.com/TymchenkoA/node-crud-api#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.25.8",
+    "babel-loader": "^9.2.1",
+    "nodemon": "^3.1.7",
+    "prettier": "^3.3.3",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-node-externals": "^3.0.0"
+  }
+}
