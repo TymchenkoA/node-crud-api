@@ -8,7 +8,11 @@ const __dirname = path.dirname(__filename);
 export default {
   entry: './src/index.js',
   target: 'node',
-  externals: [nodeExternals()],
+  externals: [
+    nodeExternals({
+      allowlist: [/^uuid/]
+    }),
+  ],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',

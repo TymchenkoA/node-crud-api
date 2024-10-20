@@ -1,5 +1,5 @@
 import { createServer } from "node:http";
-import { requestHandler } from "./routes.js";
+import { requestHandler } from "./routes/usersRoutes.js";
 
 const server = createServer(requestHandler);
 const PORT = process.env.PORT || 3000;
